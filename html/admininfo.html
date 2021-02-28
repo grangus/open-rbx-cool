@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>RBX.COOL - Administration</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-3" data-aos="fade-down">
+        <a class="navbar-brand ml-3" href="/">
+            RBX.COOL <small class="tsm align-text-top">Admin</small class="tsm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item grow active">
+                    <a class="nav-link" href="/admin/info"><i class="fas fa-info-circle"></i>
+                        Info
+                    </a>
+                </li>
+                <li class="nav-item mr-2 grow">
+                    <a class="nav-link" href="/admin/actions"><i class="fas fa-gavel"></i>
+                        Actions
+                    </a>
+                </li>
+                <li class="nav-item grow mb-1" id="logoutHeaderBtn">
+                    <a class="btn grad-primary text-white border-0 rounded-pill px-4 mr-2">
+                        Logout
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container mt-5 pt-5 text-center">
+            <h1 class="pb-5">Welcome to the admin panel!</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-12 mb-4">
+                    <div class="card bg-white border-0 shadow-lg pb-4" data-aos="zoom-in">
+                        <div class="card-title">
+                            <h4 class="py-3">Site statistics</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Users</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="users">0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Stock</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="stock">R$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Offers completed</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="offers">0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>R$ paid</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="paid">R$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Online</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="online">N/A</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-white border-0 shadow-lg">
+                        <div class="card-title">
+                            <h4 class="pt-3">Groups stocked</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <h3 id="noGroups" class="text-center" style="display: none;">
+                                No groups onsite!
+                            </h3>
+                            <div class="row" id="groupsList">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Pending payouts</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <ul class="list-group" id="pendingTransactions">
+                                <h3 id="noPending" style="display: none;">
+                                    No pending transactions!
+                                </h3>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Site promocodes</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <ul class="list-group" id="promocodes">
+                                <h3 id="noCodes" style="display: none;">
+                                    No promocodes available!
+                                </h3>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/adminInfo.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
+</body>
+
+</html>

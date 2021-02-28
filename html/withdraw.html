@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157111387-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157111387-1');
+    </script>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>RBX.COOL - Withdraw</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-3" data-aos="fade-down">
+        <a class="navbar-brand ml-3" href="/">
+            RBX.COOL <small class="tsm align-text-top">BETA</small class="tsm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/earn"><i class="fas fa-coins"></i>
+                        Earn
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/purchase/beta"><i class="fas fa-shopping-cart"></i>
+                        Purchase
+                    </a>
+                </li>
+                
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/giveaway"><i class="fas fa-tint"></i>
+                        Giveaway
+                    </a>
+                </li>
+                <!-- <li class="nav-item grow">
+                    <a class="nav-link" href="/blog"><i class="fas fa-newspaper"></i>
+                        Blog
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/faq"><i class="fas fa-question-circle"></i>
+                        FAQ
+                    </a>
+                </li> -->
+                <li class="nav-item grow">
+                    <a class="nav-link" href="https://forum.rbx.cool"><i class="fas fa-comment-alt"></i>
+                        Support
+                    </a>
+                </li>
+                <li class="nav-item mr-2 grow">
+                    <a class="nav-link" href="/settings"><i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item grow mb-1" id="logoutHeaderBtn">
+                    <a class="btn grad-primary text-white border-0 rounded-pill px-4 mr-2">
+                        Logout
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container d-flex flex-column">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 pt-5 mt-md-5 mb-5 mx-2">
+                    <div class="card bg-white border-0 shadow-lg py-3 px-3 mt-5 text-center" data-aos="zoom-in">
+                        <div class="card-img">
+                            <img src="../assets/svgs/custom/cashbag.svg" width="35%" height="35%">
+                        </div>
+                        <div class="card-title mt-3">
+                            <h1>
+                                Withdraw your earnings!
+                            </h1>
+                            <h5>Stock: <b id="stock">R$0</b></h5>
+                            <h6>Your balance: <b id="balance">R$0</b></h6>
+                        </div>
+                        <div class="card-content mt-3">
+                            <form id="withdrawForm">
+                                <div class="form-group">
+                                    <label for="amountInput">Amount to withdraw</label>
+                                    <input type="number" class="form-control rounded-pill" id="amountInput"
+                                        placeholder="1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userInput">Your username</label>
+                                    <input type="text" class="form-control rounded-pill" id="userInput"
+                                        placeholder="Builderman">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-primary text-white border-0 rounded-pill my-3">Withdraw</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.0/dist/fingerprint2.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/withdraw.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
+</body>
+
+</html>

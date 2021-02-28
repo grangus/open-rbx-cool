@@ -1,0 +1,18 @@
+section.gone {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gone-img {
+    width: 10vw;
+    margin: 2rem 0;
+}
+
+.live-link {
+    text-decoration: none;
+    color: #475EFE;
+}

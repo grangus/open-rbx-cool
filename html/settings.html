@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157111387-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157111387-1');
+    </script>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>RBX.COOL - Settings & Security</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-3" data-aos="fade-down">
+        <a class="navbar-brand ml-3" href="/">
+            RBX.COOL <small class="tsm align-text-top">BETA</small class="tsm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/earn"><i class="fas fa-coins"></i>
+                        Earn
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/purchase/beta"><i class="fas fa-shopping-cart"></i>
+                        Purchase
+                    </a>
+                </li>
+                
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/giveaway"><i class="fas fa-tint"></i>
+                        Giveaway
+                    </a>
+                </li>
+
+                <!-- <li class="nav-item grow">
+                    <a class="nav-link" href="/blog"><i class="fas fa-newspaper"></i>
+                        Blog
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/faq"><i class="fas fa-question-circle"></i>
+                        FAQ
+                    </a>
+                </li> -->
+                <li class="nav-item grow">
+                    <a class="nav-link" href="https://forum.rbx.cool"><i class="fas fa-comment-alt"></i>
+                        Support
+                    </a>
+                </li>
+                <li class="nav-item mr-2 grow">
+                    <a class="nav-link active" href="/settings"><i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item grow mb-1" id="logoutHeaderBtn">
+                    <a class="btn grad-primary text-white border-0 rounded-pill px-4 mr-2">
+                        Logout
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container mt-5 pt-5 text-center">
+            <h1 class="pb-5">Welcome to your settings panel!</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-12 mb-4">
+                    <div class="card bg-white border-0 shadow-lg pb-4">
+                        <div class="card-title">
+                            <h4 class="py-3">Account information</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Username</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="username"></b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Referrals</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="referrals">0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Email</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="email"></b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Balance</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="balance">R$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Pending balance</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="pending">R$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Referral Link</h5>
+                                    </div>
+                                    <div>
+                                        <button id="referralBtn"
+                                            class="btn grad-primary text-white border-0 rounded-pill"
+                                            data-clipboard-text="">
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-white border-0 shadow-lg">
+                        <div class="card-title">
+                            <h4 class="pt-3">Change password</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="passwordChangeForm">
+                                <div class="form-group">
+                                    <label for="currentPasswordInput">Your current password</label>
+                                    <input type="password" class="form-control rounded-pill" id="currentPasswordInput"
+                                        placeholder="*******">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPasswordInput">New password</label>
+                                    <input type="password" class="form-control rounded-pill" id="newPasswordInput"
+                                        placeholder="*******">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-primary text-white border-0 rounded-pill my-3">Update</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-white border-0 shadow-lg">
+                        <div class="card-title">
+                            <h4 class="pt-3">Change email</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="emailChangeForm">
+                                <div class="form-group">
+                                    <label for="currentEmailPasswordInput">Your current password</label>
+                                    <input type="password" class="form-control rounded-pill"
+                                        id="currentEmailPasswordInput" placeholder="*******">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newEmailInput">New email</label>
+                                    <input type="email" class="form-control rounded-pill" id="newEmailInput"
+                                        placeholder="admin@rbx.cool">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-info text-white border-0 rounded-pill my-3">Update</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/settings.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
+</body>
+
+</html>

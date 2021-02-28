@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>RBX.COOL - Reseller</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-3" data-aos="fade-down">
+        <a class="navbar-brand ml-3" href="/">
+            RBX.COOL <small class="tsm align-text-top">BETA</small class="tsm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item grow mb-1" id="logoutHeaderBtn">
+                    <a class="btn grad-primary text-white border-0 rounded-pill px-4 mr-2">
+                        Logout
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container mt-5 pt-5 text-center">
+            <h1 class="pb-5">Welcome to the reseller panel!</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-white border-0 shadow-lg pb-4">
+                        <div class="card-title">
+                            <h4 class="py-3">Account information</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Username</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="username">Grangus</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Sold R$</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="sold">R$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Rewarded R$</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="rewarded">R$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Faucet R$</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="faucet">R$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Sales Rates</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="saleRates">$0/k</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Offerwall Rates</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="offerwallRates">$0/k</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Faucet Rates</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="faucetRates">$0/k</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Estimated Payout</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="payout">$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Reversals</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="reversals">$0</b>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 pb-md-3">
+                                    <div>
+                                        <h5>Fees</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <b id="fees">$0</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg">
+                        <div class="card-title">
+                            <h4 class="pt-3">Add group</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="addGroupForm">
+                                <div class="form-group">
+                                    <label for="groupIdInput">Group ID</label>
+                                    <input type="number" class="form-control rounded-pill" id="groupIdInput"
+                                        placeholder="12456">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cookieInput">Account cookie</label>
+                                    <input type="password" class="form-control rounded-pill" id="cookieInput"
+                                        placeholder="_|WARNING-DO-NOT-SHARE-THIS....">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-primary text-white border-0 rounded-pill my-3">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-white border-0 shadow-lg">
+                        <div class="card-title">
+                            <h4 class="pt-3">Groups stocked</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <h3 id="noGroups" class="text-center" style="display: none;">
+                                No groups onsite!
+                            </h3>
+                            <div class="row" id="groupsList">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg">
+                        <div class="card-title">
+                            <h4 class="pt-3">Remove group</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="removeGroupForm">
+                                <div class="form-group">
+                                    <label for="groupRemoveInput">Group ID</label>
+                                    <input type="number" class="form-control rounded-pill" id="groupRemoveInput"
+                                        placeholder="12456">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Remove</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.0/dist/fingerprint2.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld23NkUAAAAABDh7m17tDDwAdUDRwNb-9Tk0jbp"></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/reseller.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
+</body>
+
+</html>

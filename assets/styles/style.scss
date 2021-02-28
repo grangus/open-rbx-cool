@@ -1,0 +1,180 @@
+$theme-colors: ("primary": #b721ff,
+    "blue": #2193fd,
+    "red": #ff0844,
+    "blurple": #7289DA,
+    "black": rgb(0, 0, 0),
+    "st": rgba(0, 0, 0, 0.3),
+    "green": rgb(37, 184, 0));
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park&display=swap');
+
+body {
+    font-family: 'Kulim Park', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #0082fb;
+    border-radius: 5px;
+}
+
+.navbar {
+    transition: background-color 500ms ease !important;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.grad-primary {
+    background-image: linear-gradient(-20deg, #7621ff 0%, #9f64ff 100%) !important;
+}
+
+.grad-warning {
+    background-image: linear-gradient(120deg, #ffae17 0%, #ff8a6a 100%);
+}
+
+.grad-danger {
+    background-image: linear-gradient(120deg, #ff0844 0%, #ff7146 100%);
+}
+
+.grad-info {
+    background-image: linear-gradient(120deg, #0082fb 0%, #005bea 100%);
+}
+
+.grad-success {
+    background-image: linear-gradient(120deg, #00bb38 0%, #18b949 100%);
+}
+
+.grow {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.grow:hover,
+.grow:focus,
+.grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.btn-wide {
+    width: 100%;
+}
+
+.btn-swide {
+    width: 91%;
+}
+
+.btn-50 {
+    width: 50%;
+}
+
+.rb {
+    border-radius: 4px;
+}
+
+.tsm {
+    font-size: 9px;
+}
+
+.tsm a {
+    text-decoration: none;
+}
+
+ul.navbar-nav li.nav-item .nav-link.active {
+    color: #4B69FF !important;
+}
+
+.header-bg {
+    background-image: url('../images/header-bg.jpg');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hiw-bg {
+    background-image: url('../images/hiw-bg.jpg');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.market-bg {
+    background-image: url('../images/market-bg.jpg');
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.stats-bg {
+    background-image: url('../images/stats-bg.jpg');
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landing-bg {
+    background-image: url('../svgs/custom/background.svg');
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+.announcement {
+    padding: 0.4rem 0.8rem;
+    width: 80%;
+    background-color: #ffae00;
+    color: white;
+    border-radius: 10px;
+    top: 5rem;
+    position: absolute;
+    text-align: center;
+}
+
+.nd {
+    text-decoration: none;
+}
+
+.portrait-ad {
+    max-height: 70vh;
+}
+
+.banner-ad {
+    max-width: 90vw;
+}
+
+@media all and (min-width: 470px) {
+    .landing-header-desc {
+        max-width: 45%;
+    }
+}
+
+@media all and (max-width: 992px) {
+    nav {
+        background-color: white !important;
+    }
+
+    .navbar-brand {
+        color: black !important;
+    }
+}

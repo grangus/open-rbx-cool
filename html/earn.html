@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Earn free R$ easily with our offerwalls or redeem your daily reward!" />
+    <meta property="og:site_name" content="RBX.Cool" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="RBX.COOL - Earn" />
+    <meta property="og:description" content="Earn free R$ easily with our offerwalls or redeem your daily reward!" />
+    <meta property="og:image" content="https://rbx.cool/assets/images/cool.png" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157111387-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157111387-1');
+    </script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "237cb14a-6169-45c7-a25f-33245213e7e5",
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>RBX.COOL - Earn</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-3" data-aos="fade-down">
+        <a class="navbar-brand ml-3" href="/">
+            RBX.COOL <small class="tsm align-text-top">BETA</small class="tsm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link active" href="/earn"><i class="fas fa-coins"></i>
+                        Earn
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/purchase/beta"><i class="fas fa-shopping-cart"></i>
+                        Purchase
+                    </a>
+                </li>
+
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/giveaway"><i class="fas fa-tint"></i>
+                        Giveaway
+                    </a>
+                </li>
+
+                <!-- <li class="nav-item grow">
+                    <a class="nav-link" href="/blog"><i class="fas fa-newspaper"></i>
+                        Blog
+                    </a>
+                </li>
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/faq"><i class="fas fa-question-circle"></i>
+                        FAQ
+                    </a>
+                </li> -->
+                <li class="nav-item grow">
+                    <a class="nav-link" href="https://forum.rbx.cool"><i class="fas fa-comment-alt"></i>
+                        Support
+                    </a>
+                </li>
+                <li class="nav-item mr-2 grow">
+                    <a class="nav-link" href="/settings"><i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item grow mb-1" id="logoutHeaderBtn">
+                    <a class="btn grad-primary text-white border-0 rounded-pill px-4 mr-2">
+                        Logout
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container mt-5 text-center">
+            <h1 class="pt-5">Earning starts here.</h1>
+            <h5>Your balance: <b id="balance">R$0</b></h5>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="card bg-white border-0 shadow-lg py-3 px-3 mt-5">
+                        <div class="card-content text-left">
+                            <h4>- If you have completed an offer on another site, you may not be rewarded if you do it
+                                again (unless the offer allows multiple completions)</h4>
+                            <h4>- Try visiting the site on your mobile device (Phone, Tablet, etc.) for easier and
+                                higher paying offers!</h4>
+                            <h4>-Rewards that are over 150 R$ and all offers on KiwiWall will be reviewed for 24
+                                hours! Check the status in the settings tab!</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card bg-white border-0 shadow-lg py-3 px-3 mt-5">
+                        <ul class="nav nav-tabs" id="offerwallsTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active text-success" id="ayet-tab" data-toggle="tab" href="#ayet"
+                                    role="tab" aria-controls="ayet" aria-selected="true">AyeTStudios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-success" id="adgate-tab" data-toggle="tab" href="#adgate"
+                                    role="tab" aria-controls="adgate" aria-selected="false">AdGate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-success" id="adgem-tab" data-toggle="tab" href="#adgem" role="tab"
+                                    aria-controls="adgem" aria-selected="false">AdGem</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-success" id="kiwi-tab" data-toggle="tab" href="#kiwi" role="tab"
+                                    aria-controls="kiwi" aria-selected="false">KiwiWall</a>
+                            </li>
+                            <!-- Commented it out in case we want to add it back later -->
+                            <!-- <li class="nav-item">
+                                <a class="nav-link text-success" id="og-tab" data-toggle="tab" href="#ogAds" role="tab"
+                                    aria-controls="ogAds" aria-selected="false">OGAds</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link text-success" id="offertoro-tab" data-toggle="tab" href="#offertoro"
+                                    role="tab" aria-controls="offertoro" aria-selected="false">OfferToro</a>
+                            </li>
+                            <li class="nav-item ml-lg-auto">
+                                <a class="nav-link text-white grad-success border-right-0 border-left-0" id="daily-tab"
+                                    data-toggle="tab" href="#daily" role="tab" aria-controls="daily"
+                                    aria-selected="false">Daily Reward</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white grad-warning border-right-0 border-left-0" id="redeem-tab"
+                                    data-toggle="tab" href="#redeem" role="tab" aria-controls="redeem"
+                                    aria-selected="false">Redeem a code</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white grad-danger border-right-0 border-left-0" href="/withdraw"
+                                    aria-selected="false">Withdraw R$</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="offerwalls">
+                            <div class="tab-pane fade show active" id="ayet" role="tabpanel" aria-labelledby="ayet-tab">
+                                <div class="row justify-content-center my-5" id="ayetDynamicContent">
+                                    <div class="col-12" id="ayetLoading">
+                                        <i class="fas fa-5x fa-circle-notch fa-spin text-success"></i>
+                                        <h2 class="pt-3">Loading offers. Please wait...</h2>
+                                    </div>
+                                    <div class="col-12 pt-4" id="ayetNoContent" style="display: none;">
+                                        <h3>No offers available! Please try a different offerwall!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="adgate" role="tabpanel" aria-labelledby="adgate-tab">
+                                <div class="row justify-content-center my-5" id="adgateDynamicContent">
+                                    <div class="col-12" id="adgateLoading">
+                                        <i class="fas fa-5x fa-circle-notch fa-spin text-success"></i>
+                                        <h2 class="pt-3">Loading offers. Please wait...</h2>
+                                    </div>
+                                    <div class="col-12 pt-4" id="adgateNoContent" style="display: none;">
+                                        <h3>No offers available! Please try a different offerwall!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="adgem" role="tabpanel" aria-labelledby="adgem-tab">
+                                <div class="row justify-content-center my-5" id="adgemDynamicContent">
+                                    <div class="col-12" id="adgemLoading">
+                                        <i class="fas fa-5x fa-circle-notch fa-spin text-success"></i>
+                                        <h2 class="pt-3">Loading offers. Please wait...</h2>
+                                    </div>
+                                    <div class="col-12 pt-4" id="adgemNoContent" style="display: none;">
+                                        <h3>No offers available! Please try a different offerwall!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="kiwi" role="tabpanel" aria-labelledby="kiwi-tab">
+                                <div class="row justify-content-center my-5" id="kiwiDynamicContent">
+                                    <div class="col-12" id="kiwiLoading">
+                                        <i class="fas fa-5x fa-circle-notch fa-spin text-success"></i>
+                                        <h2 class="pt-3">Loading offers. Please wait...</h2>
+                                    </div>
+                                    <div class="col-12 pt-4" id="kiwiNoContent" style="display: none;">
+                                        <h3>No offers available! Please try a different offerwall!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="ogAds" role="tabpanel" aria-labelledby="og-tab">
+                                <div class="row justify-content-center my-5" id="ogadsDynamicContent">
+                                    <div class="col-12" id="ogadsLoading">
+                                        <i class="fas fa-5x fa-circle-notch fa-spin text-success"></i>
+                                        <h2 class="pt-3">Loading offers. Please wait...</h2>
+                                    </div>
+                                    <div class="col-12 pt-4" id="ogadsNoContent" style="display: none;">
+                                        <h3>No offers available! Please try a different offerwall!</h3>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="tab-pane fade" id="offertoro" role="tabpanel" aria-labelledby="offertoro-tab">
+                                <div class="row justify-content-center my-5" id="offertoroDynamicContent">
+                                    <div class="col-12" id="offertoroLoading">
+                                        <i class="fas fa-5x fa-circle-notch fa-spin text-success"></i>
+                                        <h2 class="pt-3">Loading offers. Please wait...</h2>
+                                    </div>
+                                    <div class="col-12 pt-4" id="offertoroNoContent" style="display: none;">
+                                        <h3>No offers available! Please try a different offerwall!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="daily" role="tabpanel" aria-labelledby="daily-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-3 my-5">
+                                        <img src="../assets/svgs/custom/gifts.svg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-6 mt-lg-5 pt-lg-5">
+                                        <h1>Redeem your daily reward!</h1>
+                                        <h4>Note: You must complete at least one offer to be eligible to receive this!
+                                        </h4>
+                                        <div class="h-captcha" id="dailyRedeem"
+                                            data-sitekey="e7814b56-edbd-4a8f-89fe-73e95485d036"></div>
+                                        <div class="btn btn-lg grad-success text-white" id="dailyRewardRedeem">Redeem!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="redeem" role="tabpanel" aria-labelledby="redeem-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-3 my-5">
+                                        <img src="../assets/svgs/custom/gifts.svg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-6 mt-lg-5 pt-lg-5">
+                                        <h1>Redeem a code!</h1>
+                                        <form id="redemptionForm" class="py-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control rounded-pill" id="promocodeInput"
+                                                    placeholder="Promocode here">
+                                            </div>
+                                            <div class="h-captcha" id="codeRedeem"
+                                                data-sitekey="e7814b56-edbd-4a8f-89fe-73e95485d036"></div>
+
+                                            <button type="submit"
+                                                class="btn btn-lg grad-success text-white px-5">Redeem!</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.0/dist/fingerprint2.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/earn.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
+</body>
+
+</html>

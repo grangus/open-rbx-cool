@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+:root {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* sadly doesnt work in firefox :( */
+body::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #d3d3d3;
+    border-radius: 25px;
+}
+
+nav {
+    width: 100vw;
+    height: 3.2rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transition: all ease 500ms;
+    top: 0;
+}
+
+.nav-white {
+    background-color: white;
+    box-shadow: 0px 4px 12px -3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-white>.primary-links>.primary-link svg,
+.nav-white>.secondary-toggler,
+.nav-white>.primary-links>.primary-link>.link,
+.secondary-link>.link {
+    color: #242424;
+}
+
+.secondary-link:hover {
+    background-color: #e9e9e9 !important;
+}
+
+.primary-link>.link {
+    display: flex;
+}
+
+.nav-mobile {
+    background-color: white;
+    box-shadow: 0px -2px 12px -3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-mobile>.primary-links>.primary-link svg,
+.nav-mobile>.secondary-toggler,
+.nav-mobile>.primary-links>.primary-link>.link,
+.nav-mobile>.secondary-links>.secondary-link>.link {
+    color: #242424;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.nav-logo > .logo {
+    text-decoration: none;
+    color: #242424;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.primary-links {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+
+.primary-link {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 0.5rem;
+}
+
+.primary-link svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-right: 0.3rem;
+    color: white;
+}
+
+.secondary-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 13vw;
+    background-color: white;
+    left: 84vw;
+    top: 3.5rem;
+    z-index: 5;
+    animation: fadeIn 400ms forwards;
+    border-radius: 5px 0px 5px 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.secondary-link {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem 0.1rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 0.80rem;
+}
+
+.secondary-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.2rem;
+    color: white;
+    margin-right: 2rem;
+}
+
+.secondary-toggler svg {
+    width: 100%;
+    height: 100%;
+}
+
+.secondary-toggler:hover {
+    cursor: pointer;
+}
+
+.btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1.5rem;
+    background-color: #475EFE;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+#logoutHeaderBtn:hover {
+    cursor: pointer;
+}
+
+.rounded {
+    border-radius: 25px !important;
+}
+
+footer {
+    min-height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: rgb(14, 14, 14);
+}
+
+.footer-section {
+    width: 33vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.footer-title {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 0.3rem 0;
+}
+
+.footer-item {
+    color: white;
+    text-align: center;
+    max-width: 80%;
+    margin: 0.3rem 0;
+}
+
+.footer-underline {
+    border-bottom: 2px white solid;
+    width: 70%;
+    margin: 1rem 0;
+}
+
+.underline {
+    border-bottom: 1px rgb(192, 192, 192) solid;
+    width: 70%;
+    margin: 1rem 0;
+}
+
+.underline-nm {
+    border-bottom: 1px rgb(212, 212, 212) solid;
+    width: 70%;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.full-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 100%;
+}
+
+.full-form>form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.full-form>form>input {
+    border: 1px #ebebeb solid;
+    border-radius: 25px;
+    padding: 0.4rem 2rem;
+    margin: 0.5rem 0;
+    background-color: #f1f1f1;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 95%;
+}
+
+.full-form>form>button {
+    border: none;
+    margin: 0.7rem 0;
+    width: 95%;
+}
+
+.form-title {
+    font-size: 1.2rem;
+}
+
+.form-img {
+    width: 25vw;
+}
+
+.form-footer-text {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+}
+
+.form-footer-text>a {
+    text-decoration: none;
+    color: #475EFE;
+}
+
+.captcha-protection {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+}
+
+.captcha-protection>a {
+    text-decoration: none;
+    color: #475EFE;
+}
+
+.input-description {
+    font-size: 0.75rem;
+    margin-bottom: -0.3rem;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+}
+
+.red {
+    color: rgb(255, 42, 42);
+}
+
+.green {
+    color: rgb(42, 206, 69);
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+@media all and (max-width: 768px) {
+    nav {
+        bottom: 0;
+        top: unset;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .secondary-toggler {
+        margin-right: auto;
+    }
+
+    .primary-link {
+        flex-direction: column;
+    }
+
+    .primary-link>.link {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.7rem;
+    }
+
+    .secondary-links {
+        width: 65vw;
+        left: 30vw;
+        bottom: 3.5rem;
+        top: auto;
+        justify-content: flex-end;
+        border-radius: 5px 5px 0px 5px;
+    }
+
+    .secondary-link {
+        margin: 0.4rem 0;
+    }
+
+    footer {
+        flex-direction: column;
+        padding-bottom: 3.5rem;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 90vw;
+    }
+
+    .full-form {
+        width: 95vw;
+    }
+
+    .form-img {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

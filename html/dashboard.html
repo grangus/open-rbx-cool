@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <meta
+      name="description"
+      content="Top up your RBX.COOL wallet with R$ funds and withdraw instantly at any time using group payouts! We offer the cheapest R$ funds rate online and always have stock for you to buy!"
+    />
+    <meta property="og:site_name" content="RBX.Cool" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="RBX.COOL - Dashboard" />
+    <meta
+      property="og:description"
+      content="Top up your RBX.COOL wallet with R$ funds and withdraw instantly at any time using group payouts! We offer the cheapest R$ funds rate online and always have stock for you to buy!"
+    />
+    <meta
+      property="og:image"
+      content="https://rbx.cool/assets/images/cool.png"
+    />
+
+    <title>RBX.COOL - Dashboard</title>
+    <link rel="stylesheet" href="../assets/beta/css/base.css" />
+    <link rel="stylesheet" href="../assets/beta/css/dash.css" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-157111387-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-157111387-1");
+    </script>
+    <script src="https://browser.sentry-cdn.com/5.20.1/bundle.min.js" integrity="sha384-O8HdAJg1h8RARFowXd2J/r5fIWuinSBtjhwQoPesfVILeXzGpJxvyY/77OaPPXUo" crossorigin="anonymous">
+    </script>
+    <script>
+        Sentry.init({ dsn: 'https://7309045951c04f46b23d072d8e70710d@o435421.ingest.sentry.io/5394701' });
+    </script>
+    <script src="../assets/beta/js/nav.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <a href="/" class="logo">
+          RBX.COOL
+        </a>
+      </div>
+
+      <ul class="primary-links">
+        <li class="primary-link">
+          <a href="/purchase/beta" class="link">
+            Purchase
+          </a>
+        </li>
+        <li class="primary-link">
+          <a href="/dashboard" class="link">
+            Dashboard
+          </a>
+        </li>
+        <li class="primary-link">
+          <a href="/discord" class="link">
+            Discord
+          </a>
+        </li>
+      </ul>
+
+      <div class="secondary-toggler">
+        <svg id="menuToggler"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fal"
+          data-icon="bars"
+          class="svg-inline--fa fa-bars fa-w-14"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z"
+          ></path>
+        </svg>
+        <svg id="menuCloseToggler"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fal"
+          data-icon="times"
+          class="svg-inline--fa fa-times fa-w-10 d-none"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"
+        >
+          <path
+            fill="currentColor"
+            d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+          ></path>
+        </svg>
+      </div>
+
+      <ul class="secondary-links d-none">
+        <li class="secondary-link" id="loginBtnLink">
+          <a href="/login" class="link" id="loginBtn">Login</a>
+        </li>
+        <li class="secondary-link" id="registerBtnLink">
+          <a href="/register" class="link" id="registerBtn">Register</a>
+        </li>
+        <li class="secondary-link">
+          <a href="/redeem" class="link">Redeem</a>
+        </li>
+        <li class="secondary-link">
+          <a id="logoutHeaderBtn" class="link">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="stats-grid">
+      <div class="stat-item card">
+        <img src="../assets/beta/images/balance.svg" alt="" class="stat-icon" />
+        <div class="stat-text">
+          <p class="stat-name">Balance</p>
+          <p class="stat-value" id="balance">R$0</p>
+        </div>
+      </div>
+      <div class="stat-item card">
+        <img src="../assets/beta/images/clock.svg" alt="" class="stat-icon" />
+        <div class="stat-text">
+          <p class="stat-name">Pending</p>
+          <p class="stat-value" id="pending">R$0</p>
+        </div>
+      </div>
+      <div class="stat-item card">
+        <img src="../assets/beta/images/stock.svg" alt="" class="stat-icon" />
+        <div class="stat-text">
+          <p class="stat-name">Stock</p>
+          <p class="stat-value" id="stock">R$0</p>
+        </div>
+      </div>
+      <div class="stat-item card">
+        <img src="../assets/beta/images/referrals.svg" class="stat-icon" />
+        <div class="stat-text">
+          <p class="stat-name">Referrals</p>
+          <p class="stat-value" id="referrals">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-grid">
+      <div class="withdraw card">
+        <p class="withdraw-title">Withdraw your balance!</p>
+        <div class="underline"></div>
+        <form id="withdrawForm">
+          <p class="input-description">Your in-game username</p>
+          <input type="text" placeholder="Builderman" id="userInput" />
+          <p class="input-description">Amount to withdraw</p>
+          <input type="number" placeholder="5" id="amountInput" />
+          <div class="underline-nm"></div>
+          <button class="btn">Withdraw</button>
+        </form>
+      </div>
+      <div class="recent card">
+        <p class="recent-title">Your recent transactions</p>
+        <div class="no-transactions">
+          <h1>Nothing here...</h1>
+        </div>
+        <ul class="transaction-list d-none"></ul>
+      </div>
+      <div class="refer card">
+        <h3 class="refer-title">Refer your friends!</h3>
+        <p class="refer-description">
+          By referring your friends to our website, you will earn 1% of all
+          purchases they make for life. You can refer your friends by sending
+          them your unique referral link.
+        </p>
+        <span class="btn" id="referralBtn" data-clipboard-text=""
+          >Copy link</span
+        >
+      </div>
+      <div class="purchase card">
+        <p class="purchase-title">
+          Want a sponsorship?
+        </p>
+
+        <a href="/discord" class="btn">Contact us!</a>
+      </div>
+      <div class="email-change card">
+        <p class="email-title">Change your email!</p>
+        <div class="underline"></div>
+        <form id="emailForm">
+          <p class="input-description">New email</p>
+          <input type="text" placeholder="admin@rbx.cool" id="newEmailInput" />
+          <p class="input-description">Current Password</p>
+          <input
+            type="password"
+            placeholder="*********"
+            id="emailPasswordInput"
+          />
+          <div class="underline-nm"></div>
+          <button class="btn">Change</button>
+        </form>
+      </div>
+      <div class="password-change card">
+        <p class="password-title">Change your password!</p>
+        <div class="underline"></div>
+        <form id="passwordForm">
+          <p class="input-description">Your current password</p>
+          <input
+            type="password"
+            placeholder="*********"
+            id="currentPasswordInput"
+          />
+          <p class="input-description">New password</p>
+          <input
+            type="password"
+            placeholder="*********"
+            id="newPasswordInput"
+          />
+          <div class="underline-nm"></div>
+          <button class="btn">Change</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.0/dist/fingerprint2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+    <script>
+      Swal.fire({
+        imageUrl: 'https://i.imgur.com/YwAfesH.png',
+        title: 'R.I.P Payouts',
+        text: "As of today, Roblox has made it impossible to offer group payouts. We are currently refunding all remaining RBX.COOL balance. Please join our Discord for more information!"
+      });
+    </script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/beta/js/dash.js"></script>
+  </body>
+</html>

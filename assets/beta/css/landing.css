@@ -1,0 +1,146 @@
+.landing-bg {
+    position: absolute;
+    z-index: -1;
+    background-image: url('../images/landing-bg.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    height: 300vh;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+section.landing-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    color: #1d1d1d;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #242424;
+    font-size: 0.8rem;
+    max-width: 30vw;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.landing-img {
+    width: 35vw;
+}
+
+section.wallet-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wallet-img {
+    width: 30vw;
+}
+
+.wallet-text {
+    width: 35vw;
+}
+
+.wallet-text>.title,
+.wallet-text>.subtitle {
+    color: white;
+}
+
+section.support-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.support-img {
+    width: 40vw;
+}
+
+@media all and (max-width: 600px) {
+    .wallet-text>.title {
+        font-size: 1.3rem;
+        max-width: 70%;
+    }
+
+    .wallet-text>.subtitle {
+        font-size: 0.7rem;
+        max-width: 90%;
+    }
+
+    .landing-img {
+        display: none;
+    }
+
+    .wallet-img {
+        width: 45vw;
+    }
+
+    .support-img {
+        width: 65vw;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .landing-bg {
+        width: 150vw;
+        height: 300vh;
+        background-size: contain;
+        left: 5%;
+        top: -10%;
+    }
+
+    .landing-text,
+    .wallet-text,
+    .support-text {
+        width: 90vw;
+    }
+
+    .wallet-text>.title,
+    .wallet-text>.subtitle {
+        color: #242424;
+    }
+    
+    .title {
+        font-size: 1.3rem;
+        max-width: 70%;
+    }
+
+    .subtitle {
+        font-size: 0.7rem;
+        max-width: 90%;
+    }
+
+    section.landing-section {
+        justify-content: center;
+    }
+    
+    section.wallet-section {
+        flex-direction: column-reverse;
+    }
+
+    section.landing-section,
+    section.support-section {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .landing-img {
+        width: 25vw;
+    }
+}

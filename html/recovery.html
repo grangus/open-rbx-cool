@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Forgot your RBX.COOL password? Recover your account here!" />
+    <meta property="og:site_name" content="RBX.Cool" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="RBX.COOL - Recovery" />
+    <meta property="og:description" content="Forgot your RBX.COOL password? Recover your account here!" />
+    <meta property="og:image" content="https://rbx.cool/assets/images/cool.png" />
+
+    <title>RBX.COOL - Recovery</title>
+    <link rel="stylesheet" href="../assets/beta/css/base.css">
+    <link rel="stylesheet" href="../assets/beta/css/reset.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157111387-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157111387-1');
+    </script>
+    <script src="../assets/beta/js/nav.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="/" class="logo">
+                RBX.COOL
+            </a>
+        </div>
+
+        <ul class="primary-links">
+            <li class="primary-link">
+                <a href="/purchase/beta" class="link">
+                    
+                    Purchase
+                </a>
+            </li>
+            <li class="primary-link">
+                <a href="/dashboard" class="link">
+                    
+                    Dashboard
+                </a>
+            </li>
+            <li class="primary-link">
+                <a href="/discord" class="link">
+                    
+                    Discord
+                </a>
+            </li>
+        </ul>
+
+        <div class="secondary-toggler">
+            <svg id="menuToggler"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fal"
+          data-icon="bars"
+          class="svg-inline--fa fa-bars fa-w-14"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z"
+          ></path>
+        </svg>
+        <svg id="menuCloseToggler"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fal"
+          data-icon="times"
+          class="svg-inline--fa fa-times fa-w-10 d-none"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"
+        >
+          <path
+            fill="currentColor"
+            d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+          ></path>
+        </svg>
+        </div>
+
+        <ul class="secondary-links d-none">
+            <li class="secondary-link" id="loginBtnLink">
+                <a href="/login" class="link" id="loginBtn">Login</a>
+            </li>
+            <li class="secondary-link" id="registerBtnLink">
+                <a href="/register" class="link" id="registerBtn">Register</a>
+            </li>
+            
+            <li class="secondary-link">
+                <a href="/redeem" class="link">Redeem</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="reset">
+        <div class="full-form">
+            <p class="form-title">Reset your password</p>
+            <div class="underline"></div>
+            <form id="recoveryForm">
+                <input type="email" placeholder="Email" id="emailInput">
+                <div class="underline-nm"></div>
+                <button class="btn">Send email!</button>
+                <div class="captcha-protection">
+                    This site is protected by reCAPTCHA and the Google
+                    <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                    <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+                </div>
+            </form>
+        </div>
+
+        <img class="form-img" src="../assets/beta/images/eye.svg" alt="">
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.0/dist/fingerprint2.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld23NkUAAAAABDh7m17tDDwAdUDRwNb-9Tk0jbp"></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/beta/js/recovery.js"></script>
+</body>
+
+</html>

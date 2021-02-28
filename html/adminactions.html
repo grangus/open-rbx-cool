@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>RBX.COOL - Administration</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-3" data-aos="fade-down">
+        <a class="navbar-brand ml-3" href="/">
+            RBX.COOL <small class="tsm align-text-top">Admin</small class="tsm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/admin/info"><i class="fas fa-info-circle"></i>
+                        Info
+                    </a>
+                </li>
+                <li class="nav-item mr-2 grow active">
+                    <a class="nav-link" href="/admin/actions"><i class="fas fa-gavel"></i>
+                        Actions
+                    </a>
+                </li>
+                <li class="nav-item grow mb-1" id="logoutHeaderBtn">
+                    <a class="btn grad-primary text-white border-0 rounded-pill px-4 mr-2">
+                        Logout
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container mt-5 pt-5 text-center">
+            <h1 class="pb-5">Welcome to the admin panel!</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Ban PayPal</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="banPaypalForm">
+                                <div class="form-group">
+                                    <label for="banPaypalInput">PayPal email</label>
+                                    <input type="text" class="form-control rounded-pill" id="banPaypalInput"
+                                        placeholder="Email">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Ban</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Ban User</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="banUserForm">
+                                <div class="form-group">
+                                    <label for="banUserInput">Site username</label>
+                                    <input type="text" class="form-control rounded-pill" id="banUserInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Ban</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Ban Roblox User</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="banRobloxUserForm">
+                                <div class="form-group">
+                                    <label for="banRobloxUserInput">Roblox username</label>
+                                    <input type="text" class="form-control rounded-pill" id="banRobloxUserInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Ban</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Whitelist User Transactions</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="whitelistTransactionsForm">
+                                <div class="form-group">
+                                    <label for="whitelistUserInput">Username</label>
+                                    <input type="text" class="form-control rounded-pill" id="whitelistUserInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-success text-white border-0 rounded-pill my-3">Whitelist</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Generate Bypass Token</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="bypassForm">
+                                <button type="submit"
+                                    class="btn btn-wide grad-success text-white border-0 rounded-pill my-3">Generate</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Ban Fingerprint</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="banFingerprintForm">
+                                <div class="form-group">
+                                    <label for="banFingerprintInput">Fingerprint to ban</label>
+                                    <input type="text" class="form-control rounded-pill" id="banFingerprintInput"
+                                        placeholder="Fingerprint">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Ban</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Ban IP</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="banIpForm">
+                                <div class="form-group">
+                                    <label for="banIpInput">IP to ban</label>
+                                    <input type="text" class="form-control rounded-pill" id="banIpInput"
+                                        placeholder="IP Address">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Ban</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Get User Info</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="userInfoForm">
+                                <div class="form-group">
+                                    <label for="userInfoInput">Site username</label>
+                                    <input type="text" class="form-control rounded-pill" id="userInfoInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-success text-white border-0 rounded-pill my-3">Get</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Create Promocode</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="createPromoForm">
+                                <div class="form-group">
+                                    <label for="promocodeInput">Promocode</label>
+                                    <input type="text" class="form-control rounded-pill" id="promocodeInput"
+                                        placeholder="Promocode">
+                                </div>
+                                <div class="form-group">
+                                    <label for="promocodeValueInput">Value</label>
+                                    <input type="number" class="form-control rounded-pill" id="promocodeValueInput"
+                                        placeholder="5">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-primary text-white border-0 rounded-pill my-3">Create</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Generate Single-use Code</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="generateCodeForm">
+                                <div class="form-group">
+                                    <label for="codeValueInput">Value</label>
+                                    <input type="number" class="form-control rounded-pill" id="codeValueInput"
+                                        placeholder="5">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-info text-white border-0 rounded-pill my-3">Generate</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Delete Promocode</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="deletePromoForm">
+                                <div class="form-group">
+                                    <label for="deletePromocodeInput">Promocode</label>
+                                    <input type="text" class="form-control rounded-pill" id="deletePromocodeInput"
+                                        placeholder="Promocode">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-warning text-white border-0 rounded-pill my-3">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Create Multi-use Promocode</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="createMultiForm">
+                                <div class="form-group">
+                                    <label for="createMultiCodeInput">Promocode</label>
+                                    <input type="text" class="form-control rounded-pill" id="createMultiCodeInput"
+                                        placeholder="Promocode">
+                                </div>
+                                <div class="form-group">
+                                    <label for="createMultiValueInput">Value</label>
+                                    <input type="number" class="form-control rounded-pill" id="createMultiValueInput"
+                                        placeholder="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="createMultiUsesInput">Max Uses</label>
+                                    <input type="number" class="form-control rounded-pill" id="createMultiUsesInput"
+                                        placeholder="10">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-primary text-white border-0 rounded-pill my-3">Create</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Create Reseller</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="resellerCreationForm">
+                                <div class="form-group">
+                                    <label for="resellerNameInput">Reseller username</label>
+                                    <input type="text" class="form-control rounded-pill" id="resellerNameInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resellerSaleRates">Sale rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="resellerSaleRates"
+                                        placeholder="5.5" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resellerRewardRates">Reward rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="resellerRewardRates"
+                                        placeholder="10" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resellerFaucetRates">Faucet rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="resellerFaucetRates"
+                                        placeholder="10" step=".01">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-success text-white border-0 rounded-pill my-3">Create</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Remove reseller</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="removeResellerForm">
+                                <div class="form-group">
+                                    <label for="removeResellerNameInput">Reseller username</label>
+                                    <input type="text" class="form-control rounded-pill" id="removeResellerNameInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Remove</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Reset reseller</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="resetResellerForm">
+                                <div class="form-group">
+                                    <label for="resetResellerNameInput">Reseller username</label>
+                                    <input type="text" class="form-control rounded-pill" id="resetResellerNameInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-danger text-white border-0 rounded-pill my-3">Reset</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Get Reseller Info</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="resellerInfoForm">
+                                <div class="form-group">
+                                    <label for="resellerInfoInput">Reseller username</label>
+                                    <input type="text" class="form-control rounded-pill" id="resellerInfoInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-success text-white border-0 rounded-pill my-3">Get</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Set Reseller Rates</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="resellerRatesForm">
+                                <div class="form-group">
+                                    <label for="resellerRatesUsernameInput">Reseller username</label>
+                                    <input type="text" class="form-control rounded-pill" id="resellerRatesUsernameInput"
+                                        placeholder="Username">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resellerSaleRatesInput">Sale rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="resellerSaleRatesInput"
+                                        placeholder="6" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resellerRewardRatesInput">Reward rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="resellerRewardRatesInput"
+                                        placeholder="10" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resellerFaucetRatesInput">Faucet rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="resellerFaucetRatesInput"
+                                        placeholder="10" step=".01">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-info text-white border-0 rounded-pill my-3">Set</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-white border-0 shadow-lg py-3">
+                        <div class="card-title">
+                            <h4 class="pt-3">Set Site Rates</h4>
+                        </div>
+                        <div class="card-content mx-3">
+                            <form id="siteRatesForm">
+                                <div class="form-group">
+                                    <label for="siteSaleRatesInput">Sale rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="siteSaleRatesInput"
+                                        placeholder="6" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="siteOfferwallRatesInput">Offerwall rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="siteOfferwallRatesInput"
+                                        placeholder="10" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="siteDailyRewardInput">Daily reward</label>
+                                    <input type="number" class="form-control rounded-pill" id="siteDailyRewardInput"
+                                        placeholder="5" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="siteFaucetBaseInput">Faucet base</label>
+                                    <input type="number" class="form-control rounded-pill" id="siteFaucetBaseInput"
+                                        placeholder="15" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="siteGameRatesInput">Game rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="siteGameRatesInput"
+                                        placeholder="10" step=".01">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="siteCaptchaRatesInput">Captcha rates</label>
+                                    <input type="number" class="form-control rounded-pill" id="siteCaptchaRatesInput"
+                                        placeholder="10" step=".01">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-primary text-white border-0 rounded-pill my-3">Change</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/adminActions.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
+</body>
+
+</html>

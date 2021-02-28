@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park&display=swap');
+
+body {
+    font-family: 'Kulim Park', sans-serif;
+    overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme > img {
+    width: 35vw;
+}
+
+.loading-circle {
+    max-width: 3rem;
+    animation: rotate 1s infinite;
+}
+
+.wait {
+    font-size: 1.5rem;
+    max-width: 95vw;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media all and (max-width: 600px) {
+    .meme > img {
+        width: 75vw;
+    }
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>RBX.COOL - Reseller</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-3" data-aos="fade-down">
+        <a class="navbar-brand ml-3" href="/">
+            RBX.COOL <small class="tsm align-text-top">BETA</small class="tsm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item grow">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 pt-md-5 mt-md-5 mb-5 mx-2">
+                    <div class="card bg-white border-0 shadow-lg py-3 px-3 mt-5 text-center" data-aos="zoom-in">
+                        <div class="card-title mt-3">
+                            <h1>
+                                Reseller login!
+                            </h1>
+                        </div>
+                        <div class="card-content mt-3">
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="userInput">Your username</label>
+                                    <input type="text" class="form-control rounded-pill" id="userInput"
+                                        placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="passwordInput">Your password</label>
+                                    <input type="password" class="form-control rounded-pill" id="passwordInput"
+                                        placeholder="Password">
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-wide grad-success text-white border-0 rounded-pill my-3">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.0/dist/fingerprint2.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld23NkUAAAAABDh7m17tDDwAdUDRwNb-9Tk0jbp"></script>
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/resellerAuth.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
+</body>
+
+</html>
